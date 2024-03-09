@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Orbitron -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
+    <!-- Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
+    <!-- Source Code Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Freeplay Haven</title>
+</head>
+<body>
+    <header>
+        <h1>FREEPLAY HAVEN</h1>
+        <section id="menu">
+            <div id="genre-wrapper">
+                <h2>Genres</h2>
+                <div id="genre-container">
+                </div>
+            </div>
+            <div id="platform-wrapper">
+                <h2>Platforms</h2>
+                <div id="platform-container">
+                </div>
+            </div>
+        </section>
+    </header>
+    <main>
+        <section id="main-content">
+            <form id="pagination-above-container" class="pagination-control">
+            </form>
+            <div id="sort-wrapper">
+                <div id="page-size-container">
+                    <p>Games per page:</p>
+                    <select id="page-size-filter">
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                </div>
+                <div id="sort-container">
+                    <p>Sort by:</p>
+                    <select id="sort-filter">
+                        <!-- Value none since relevance is default -->
+                        <option value="">Relevance</option> 
+                        <option value="alphabetical">Alphabetical</option>
+                        <option value="popularity">Popularity</option>
+                        <option value="release-date">Release Date</option>
+                    </select>
+                    <img id="sort-order-icon" src="./icons/Descending.png">
+                </div>
+            </div>
+            <ul id="card-list">
+            </ul>
+            <form id="pagination-below-container" class="pagination-control">
+            </form>
+        </section>
+    </main>
+</body>
+</html>
