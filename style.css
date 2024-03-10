@@ -201,6 +201,10 @@ a {
     border-radius: 10px;
 }
 
+#pagination-below-container {
+    margin-top: 30px;
+}
+
 /* IMAGES / ICONS */
 .card-thumbnail {
     max-height: 150px;
