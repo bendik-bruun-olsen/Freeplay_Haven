@@ -165,7 +165,7 @@ function generateCard(data) {
         const descriptionContainer = document.createElement("div");
         const textContainer = document.createElement("div");
         const iconContainer = document.createElement("div");
-        
+        const anchorLink = document.createElement("a");
         const img = document.createElement("img");
         const title = document.createElement("h3");
         const itemNumber = document.createElement("p");
@@ -195,7 +195,7 @@ function generateCard(data) {
         img.classList.add("card-thumbnail");
         genre.classList.add("genre");
         
-        // anchor.href = e.game_url;
+        anchorLink.href = e.game_url;
         img.src = e.thumbnail;
         title.textContent = e.title;
         description.textContent = e.short_description;
@@ -206,16 +206,13 @@ function generateCard(data) {
         if (sortAscending) indexPos = dataArrLength - indexPos + 1;
         itemNumber.textContent = `#${indexPos}`;
 
-        cardContainer.addEventListener("click", () => {
-            window.location.href = e.game_url;
-        })
-
         titleContainer.append(title, itemNumber);
         textContainer.append(description, genre);
         descriptionContainer.append(textContainer, iconContainer);
         contentContainer.append(titleContainer, descriptionContainer);
         cardContainer.append(img, contentContainer);
-        cardList.append(cardContainer);
+        anchorLink.append(cardContainer)
+        cardList.append(anchorLink);
     });
 }
 
