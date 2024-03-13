@@ -168,7 +168,7 @@ function generateCard(data) {
         const anchorLink = document.createElement("a");
         const img = document.createElement("img");
         const title = document.createElement("h3");
-        const itemNumber = document.createElement("p");
+        const cardNumber = document.createElement("p");
         const description = document.createElement("p");
         const genre = document.createElement("p");
 
@@ -191,7 +191,8 @@ function generateCard(data) {
         titleContainer.classList.add("title-container");
         descriptionContainer.classList.add("description-container");
         iconContainer.classList.add("platform-icon-container");
-        description.classList.add("description")
+        cardNumber.classList.add("card-number");
+        description.classList.add("card-description");
         img.classList.add("card-thumbnail");
         genre.classList.add("genre");
         
@@ -204,9 +205,9 @@ function generateCard(data) {
         // Calculate index pos from original array, not paginated array.
         let indexPos = ((currentPage - 1) * parseInt(pageSizeFilter.value)) + i + 1;
         if (sortAscending) indexPos = dataArrLength - indexPos + 1;
-        itemNumber.textContent = `#${indexPos}`;
+        cardNumber.textContent = `#${indexPos}`;
 
-        titleContainer.append(title, itemNumber);
+        titleContainer.append(title, cardNumber);
         textContainer.append(description, genre);
         descriptionContainer.append(textContainer, iconContainer);
         contentContainer.append(titleContainer, descriptionContainer);

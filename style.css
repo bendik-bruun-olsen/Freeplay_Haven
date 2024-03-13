@@ -70,12 +70,12 @@ h3 {
     margin-right: 8px;
 }
 
-.description {
+.card-description {
     color: var(--lightgray);
-    font-size: 0.9rem;
+    /* font-size: 0.9rem; */
 }
 
-.title-container p {
+.card-number {
     color: var(--lightgray);
     font-size: 1.1rem;
 }
@@ -150,6 +150,7 @@ a {
     gap: 5px;
     justify-content: space-between;
     margin: 10px 0;
+    z-index: 1;
 }
 
 #sort-container {
@@ -165,7 +166,7 @@ a {
 #card-list {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
 }
 
 .card-container {
@@ -177,10 +178,13 @@ a {
     border-radius: 8px;
     cursor: pointer;
     user-select: none;
+    transition: transform 0.1s ease-in;
 }
 
 .card-container:hover {
     background: linear-gradient(to top, rgba(10, 10, 10, 0.3), rgba(10, 10, 10, 0.2));
+    transform: scale(1.02);
+    transition: transform 0.2s ease-out;
 }
 
 .content-container {
@@ -234,8 +238,7 @@ a {
 
 /* ---------- IMAGES / ICONS ---------------------------------------- */
 .card-thumbnail {
-    /* max-height: 150px; */
-    max-height: fit-content;
+    max-height: 150px;
     max-width: 100%;
     border-radius: 8px 0 0 8px;
     object-fit: contain;
