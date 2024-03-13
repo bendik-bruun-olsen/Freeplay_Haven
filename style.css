@@ -10,21 +10,29 @@ box-sizing: border-box;
     --near-white: #d8d8d8;
 }
 
-body {
-min-height: 100vh;
-font-size: 16px;
-font-family: "Montserrat", sans-serif;
-background: linear-gradient(160deg, #0c1445 -16.9%, rgb(71, 30, 84) 119.9%);
-background-attachment: fixed;
-background-repeat: no-repeat;
-display: flex;
-flex-direction: column;
-align-items: center;
-margin: 20px 0;
+html {
+    font-size: 16px;
 }
 
-header, main {
-    max-width: 1200px
+body {
+    min-height: 100vh;
+    width: 100vw;
+    font-family: "Montserrat", sans-serif;
+    background: linear-gradient(160deg, #0c1445 -16.9%, rgb(71, 30, 84) 119.9%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    padding: 0 40px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 /* TEXT */
@@ -44,7 +52,6 @@ h1 {
 
 h2 {
     color: var(--orange-main);
-    margin-bottom: 5px;
 }
 
 h3 {
@@ -83,20 +90,22 @@ h3 {
 }
 
 a {
-   text-decoration: none; 
-   color: inherit;
+    text-decoration: none; 
+    color: inherit;
 }
 
 /* CONTAINERS */
 #menu {
     display: flex;
+    flex-direction: column;
     gap: 10px;
-    /* background-color: rgba(0, 0, 0, 0.2); */
     background: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2));
-    padding: 10px 20px 20px 20px;;
+    padding: 10px 20px 20px 20px;
     border-radius: 10px;
     margin-bottom: 20px;
-    max-width: 1100px;
+    max-width: 1010px;
+    /* width: fit-content; */
+    width: 100%;
 }
 
 #main-content {
@@ -105,42 +114,50 @@ a {
     align-items: center;
 }
 
-/* #genre-container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    max-height: 200px;
+#grid-container {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill, 130px); */
+    grid-template-columns: 9fr 1fr;
+    grid-template-rows: auto-fill;
 }
 
-#platform-container {
-    display: flex;
-    flex-direction: column;
-} */
+#genre-title {
+    /* grid-column: 1 / -2; */
+    margin-bottom: 10px;
+}
 
-/*  */
+#platform-title {
+    /* grid-column: -1; */
+    margin-bottom: 10px;
+}
 
-
-#genre-container {
+#genre-content-container {
+    grid-column: 1;
+    grid-row: 2;
     display: grid;
-    /* grid-template-columns: repeat(8, 1fr); */
-    /* grid-template-columns: auto; */
-    grid-template-columns: repeat(auto-fill, 130px);
+    grid-template-columns: repeat(auto-fill, 140px);
+}
 
-    /* grid-template-rows: repeat(7, 1fr); */
-    /* grid-template-rows: auto; */
-    /* grid-template-rows: repeat(auto-fill, 1fr); */
-    max-width: 100%;
+#platform-content-container {
+    display: grid;
+    height: fit-content;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+/* #genre-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    max-width: 900px;
+    width: 100%;
 }
 
 #platform-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(7, 1fr);
-}
+    height: fit-content;
+} */
 
-.menu-title {
-    grid-column: 1 / -1;
-}
 
 /*  */
 
@@ -175,7 +192,6 @@ a {
     display: flex;
     flex-direction: row;
     border-radius: 8px;
-    overflow: hidden;
     cursor: pointer;
     user-select: none;
 }
@@ -236,7 +252,9 @@ a {
 /* IMAGES / ICONS */
 .card-thumbnail {
     max-height: 150px;
+    /* max-width: 100%; */
     border-radius: 8px 0 0 8px;
+    /* object-fit: contain; */
 }
 
 #sort-order-icon {
@@ -348,3 +366,42 @@ header label:hover {
     color: rgb(207, 207, 207);
     background-color: rgb(53, 53, 53);
 }
+
+/* MEDIA QUERIES */
+/* @media (max-width: 1024px) {
+    #genre-container {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+
+    #genre-container {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 425px) {
+    html {
+        font-size: 12px;
+    }
+
+    #menu {
+        flex-direction: column-reverse;
+    }
+
+    #genre-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #platform-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card-container {
+        flex-direction: column;
+    }
+} */

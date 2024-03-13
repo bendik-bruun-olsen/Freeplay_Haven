@@ -1,5 +1,5 @@
-const genreContainer = document.querySelector("#genre-container");
-const platformContainer = document.querySelector("#platform-container");
+const genreContainer = document.querySelector("#genre-content-container");
+const platformContainer = document.querySelector("#platform-content-container");
 const cardList = document.querySelector("#card-list");
 const sortOrderIcon = document.querySelector("#sort-order-icon");
 const sortFilter = document.querySelector("#sort-filter")

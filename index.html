@@ -29,57 +29,43 @@
 <body>
     <header>
         <h1>FREEPLAY HAVEN</h1>
-        <!-- <section id="menu">
-            <div id="genre-wrapper">
-                <h2>Genres</h2>
-                <div id="genre-container">
-                </div>
-            </div>
-            <div id="platform-wrapper">
-                <h2>Platforms</h2>
-                <div id="platform-container">
-                </div>
-            </div>
-        </section> -->
         <section id="menu">
-            <div id="genre-container">
-                <h2 class="menu-title">Genres</h2>
-            </div>
-            <div id="platform-container">
-                <h2 class="menu-title">Platforms</h2>
+            <div id="grid-container">
+                <h2 id="genre-title">Genres</h2>
+                <div id="genre-content-container"></div>
+                <h2 id="platform-title">Platforms</h2>
+                <div id="platform-content-container"></div>
             </div>
         </section>
     </header>
-    <main>
-        <section id="main-content">
-            <form id="pagination-above-container" class="pagination-control">
-            </form>
-            <div id="sort-wrapper">
-                <div id="page-size-container">
-                    <p>Games per page:</p>
-                    <select id="page-size-filter">
-                        <option value="25">25</option>
-                        <option value="50">50</option>
-                        <option value="100">100</option>
-                    </select>
-                </div>
-                <div id="sort-container">
-                    <p>Sort by:</p>
-                    <select id="sort-filter">
-                        <!-- Value none since relevance is default -->
-                        <option value="">Relevance</option> 
-                        <option value="alphabetical">Alphabetical</option>
-                        <option value="popularity">Popularity</option>
-                        <option value="release-date">Release Date</option>
-                    </select>
-                    <img id="sort-order-icon" src="./icons/Descending.png">
-                </div>
+    <main id="main-content">
+        <form id="pagination-above-container" class="pagination-control">
+        </form>
+        <div id="sort-wrapper">
+            <div id="page-size-container">
+                <p>Games per page:</p>
+                <select id="page-size-filter">
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
             </div>
-            <ul id="card-list">
-            </ul>
-            <form id="pagination-below-container" class="pagination-control">
-            </form>
-        </section>
+            <div id="sort-container">
+                <p>Sort by:</p>
+                <select id="sort-filter">
+                    <!-- Value none since relevance is default -->
+                    <option value="">Relevance</option> 
+                    <option value="alphabetical">Alphabetical</option>
+                    <option value="popularity">Popularity</option>
+                    <option value="release-date">Release Date</option>
+                </select>
+                <img id="sort-order-icon" src="./icons/Descending.png">
+            </div>
+        </div>
+        <ul id="card-list">
+        </ul>
+        <form id="pagination-below-container" class="pagination-control">
+        </form>
     </main>
 </body>
 </html>
