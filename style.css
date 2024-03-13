@@ -72,7 +72,6 @@ h3 {
 
 .card-description {
     color: var(--lightgray);
-    /* font-size: 0.9rem; */
 }
 
 .card-number {
@@ -100,7 +99,7 @@ a {
     padding: 10px 20px 20px 20px;
     border-radius: 10px;
     margin-bottom: 20px;
-    max-width: 1100px;
+    max-width: 1200px;
     width: 100%;
 }
 
