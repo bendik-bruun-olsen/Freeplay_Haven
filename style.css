@@ -35,7 +35,7 @@ header {
     width: 100%;
 }
 
-/* ---------- TEXT ---------- */
+/* ---------- TEXT -------------------------------------------------- */
 h1 {
     font-size: 4rem;
     font-family: "Orbitron", sans-serif;
@@ -94,7 +94,7 @@ a {
     color: inherit;
 }
 
-/* ---------- CONTAINERS ---------- */
+/* ---------- CONTAINERS -------------------------------------------------- */
 #menu {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2));
     padding: 10px 20px 20px 20px;
@@ -232,7 +232,7 @@ a {
     margin-top: 30px;
 }
 
-/* ---------- IMAGES / ICONS ---------- */
+/* ---------- IMAGES / ICONS ---------------------------------------- */
 .card-thumbnail {
     max-height: 150px;
     /* max-width: 100%; */
@@ -260,7 +260,7 @@ a {
     opacity: 50%;
 }
 
-/* ---------- CHECKBOXES & LABELS & BUTTONS ---------- */
+/* ---------- CHECKBOXES & LABELS & BUTTONS ---------------------------------------- */
 header input {
     display: none;
 }
@@ -350,7 +350,7 @@ header label:hover {
     background-color: rgb(53, 53, 53);
 }
 
-/* ---------- MEDIA QUERIES ---------- */
+/* ---------- MEDIA QUERIES ---------------------------------------- */
 @media (max-width: 1024px) {
 }
 
@@ -400,5 +400,15 @@ header label:hover {
 
     .card-container {
         flex-direction: column;
+    }
+}
+
+@media (max-width: 375px) {
+    html {
+        font-size: 10px;
+    }
+
+    body {
+        padding: 0;
     }
 }
