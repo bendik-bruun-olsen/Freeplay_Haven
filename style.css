@@ -35,7 +35,7 @@ header {
     width: 100%;
 }
 
-/* TEXT */
+/* ---------- TEXT ---------- */
 h1 {
     font-size: 4rem;
     font-family: "Orbitron", sans-serif;
@@ -94,17 +94,13 @@ a {
     color: inherit;
 }
 
-/* CONTAINERS */
+/* ---------- CONTAINERS ---------- */
 #menu {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2));
     padding: 10px 20px 20px 20px;
     border-radius: 10px;
     margin-bottom: 20px;
-    max-width: 1010px;
-    /* width: fit-content; */
+    max-width: 1100px;
     width: 100%;
 }
 
@@ -116,50 +112,37 @@ a {
 
 #grid-container {
     display: grid;
-    /* grid-template-columns: repeat(auto-fill, 130px); */
     grid-template-columns: 9fr 1fr;
-    /* grid-template-rows: auto-fill; */
 }
 
 #genre-title {
     grid-column: 1;
     margin-bottom: 10px;
+    letter-spacing: 0.1rem;
+    user-select: none;
 }
 
 #platform-title {
     grid-column: -2;
     margin-bottom: 10px;
+    letter-spacing: 0.1rem;
+    user-select: none;
 }
 
 #genre-content-container {
     grid-column: 1;
     grid-row: 2;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 140px);
+    grid-template-columns: repeat(auto-fill, 9rem);
+    justify-content: space-between;
 }
 
 #platform-content-container {
-    display: grid;
-    height: fit-content;
     grid-column: 2;
     grid-row: 2;
-}
-
-/* #genre-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-    max-width: 900px;
-    width: 100%;
-}
-
-#platform-container {
-    display: grid;
-    grid-template-columns: 1fr;
     height: fit-content;
-} */
-
-
-/*  */
+}
 
 #sort-wrapper {
     display: flex;
@@ -249,7 +232,7 @@ a {
     margin-top: 30px;
 }
 
-/* IMAGES / ICONS */
+/* ---------- IMAGES / ICONS ---------- */
 .card-thumbnail {
     max-height: 150px;
     /* max-width: 100%; */
@@ -277,7 +260,7 @@ a {
     opacity: 50%;
 }
 
-/* CHECKBOXES & LABELS & BUTTONS */
+/* ---------- CHECKBOXES & LABELS & BUTTONS ---------- */
 header input {
     display: none;
 }
@@ -367,7 +350,7 @@ header label:hover {
     background-color: rgb(53, 53, 53);
 }
 
-/* MEDIA QUERIES */
+/* ---------- MEDIA QUERIES ---------- */
 @media (max-width: 1024px) {
 }
 
@@ -376,6 +359,31 @@ header label:hover {
         font-size: 14px;
     }
 
+    #grid-container {
+        grid-template-columns: auto;
+    }
+
+    #genre-title {
+        margin: 0 auto 10px auto;
+    }
+
+    #platform-title {
+        grid-column: 1;
+        grid-row: 3;
+        margin: 0 auto 10px auto;
+    }
+
+    #platform-content-container {
+        grid-column: 1;
+        grid-row: 4;
+        grid-template-columns: repeat(3, auto);
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    #genre-content-container {
+        margin-bottom: 15px;
+    }
     
 }
 
@@ -383,6 +391,11 @@ header label:hover {
     html {
         font-size: 12px;
     }
+
+    body {
+        padding: 0 20px;
+    }
+
 
 
     .card-container {
