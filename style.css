@@ -86,7 +86,7 @@ h3 {
     padding: 5px 10px;
     border-radius: 20px;
     user-select: none;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 a {
@@ -238,7 +238,6 @@ a {
 /* ---------- IMAGES / ICONS ---------------------------------------- */
 .card-thumbnail {
     max-height: 150px;
-    max-width: 100%;
     border-radius: 8px 0 0 8px;
     object-fit: contain;
 }
@@ -298,7 +297,8 @@ header label:hover {
     border-radius: 10px;
     cursor: pointer;
     user-select: none;
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
+    font-size: 16px;
     font-family: "Montserrat", sans-serif;
     height: 30px;
     width: 30px;
@@ -403,17 +403,52 @@ header label:hover {
         flex-direction: column;
     }
 
+    .game-link {
+        width: 100%;
+    }
+
     .card-thumbnail {
         border-radius: 8px 8px 0 0;
+        width: 100%;
+        max-height: 300px;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+    }
+
+    .card-description {
+        font-size: 1.2rem;
     }
 }
 
 @media (max-width: 375px) {
-    html {
-        font-size: 10px;
+    body {
+        padding: 0 10px;
     }
 
-    body {
-        padding: 0;
+    .pagination-control {
+        gap: 5px;
+    }
+}
+
+@media (max-width: 320px) {
+    .pagination-control {
+        gap: 0;
+        margin: 0;
+    }
+
+    #sort-wrapper {
+        flex-direction: column;
+        gap: 5px;
+        margin: 15px 0;
+    }
+
+    #page-size-container {
+        justify-content: center;
+    }
+
+    #sort-container {
+        justify-content: center;
     }
 }

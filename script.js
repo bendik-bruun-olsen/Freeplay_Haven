@@ -191,10 +191,12 @@ function generateCard(data) {
         titleContainer.classList.add("title-container");
         descriptionContainer.classList.add("description-container");
         iconContainer.classList.add("platform-icon-container");
+        title.classList.add("card-title");
         cardNumber.classList.add("card-number");
         description.classList.add("card-description");
         img.classList.add("card-thumbnail");
         cardGenre.classList.add("card-genre");
+        anchorLink.classList.add("game-link");
         
         anchorLink.href = e.game_url;
         img.src = e.thumbnail;
