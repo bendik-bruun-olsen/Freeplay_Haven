@@ -170,7 +170,7 @@ function generateCard(data) {
         const title = document.createElement("h3");
         const cardNumber = document.createElement("p");
         const description = document.createElement("p");
-        const genre = document.createElement("p");
+        const cardGenre = document.createElement("p");
 
         if (e.platform.includes("PC")) {
             const pcIcon = document.createElement("img");
@@ -194,13 +194,14 @@ function generateCard(data) {
         cardNumber.classList.add("card-number");
         description.classList.add("card-description");
         img.classList.add("card-thumbnail");
-        genre.classList.add("genre");
+        cardGenre.classList.add("card-genre");
         
         anchorLink.href = e.game_url;
         img.src = e.thumbnail;
+        img.alt = "Link to game page";
         title.textContent = e.title;
         description.textContent = e.short_description;
-        genre.textContent = e.genre;
+        cardGenre.textContent = e.genre;
 
         // Calculate index pos from original array, not paginated array.
         let indexPos = ((currentPage - 1) * parseInt(pageSizeFilter.value)) + i + 1;
@@ -208,12 +209,12 @@ function generateCard(data) {
         cardNumber.textContent = `#${indexPos}`;
 
         titleContainer.append(title, cardNumber);
-        textContainer.append(description, genre);
+        textContainer.append(description, cardGenre);
         descriptionContainer.append(textContainer, iconContainer);
         contentContainer.append(titleContainer, descriptionContainer);
-        cardContainer.append(img, contentContainer);
-        anchorLink.append(cardContainer)
-        cardList.append(anchorLink);
+        anchorLink.append(img);
+        cardContainer.append(anchorLink, contentContainer);
+        cardList.append(cardContainer);
     });
 }
 

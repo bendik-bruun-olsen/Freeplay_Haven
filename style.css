@@ -79,18 +79,18 @@ h3 {
     font-size: 1.1rem;
 }
 
-.genre {
+.card-genre {
     color: var(--near-white);
     width: fit-content;
     background-color: rgba(136, 136, 136, 0.3);
     padding: 5px 10px;
     border-radius: 20px;
     user-select: none;
+    margin-top: 5px;
 }
 
 a {
     text-decoration: none; 
-    color: inherit;
 }
 
 /* ---------- CONTAINERS -------------------------------------------------- */
