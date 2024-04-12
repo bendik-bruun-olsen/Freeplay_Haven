@@ -175,8 +175,6 @@ a {
     display: flex;
     flex-direction: row;
     border-radius: 8px;
-    cursor: pointer;
-    user-select: none;
     transition: transform 0.1s ease-in;
 }
 
