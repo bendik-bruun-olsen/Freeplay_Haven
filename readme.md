@@ -9,6 +9,10 @@ Freeplay Haven is a simple and interactive website that allows users to explore 
 - **Pagination Control**: Navigate through the games list with paginated results and customizable games per page.
 - **Interactive UI**: Intuitive design for easy navigation and a smooth user experience.
 
+## How to Use
+
+Open [this link](https://bendik-bruun-olsen.github.io/Freeplay_Haven/) in a modern web browser to access the website.
+
 ## Technologies Used
 
 - **HTML**: For the structure of the webpage.
